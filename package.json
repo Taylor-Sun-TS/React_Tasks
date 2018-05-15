@@ -24,8 +24,8 @@
     },
     "scripts": {
         "build": "webpack --config ./webpack.config.js  --env.prod",
-        "start": "webpack-dev-server --config ./webpack.config.js",
-        "node-server": "node ./src/Server.js",
+        "dev": "webpack-dev-server --config ./webpack.config.js",
+        "start": "node ./src/Server.js",
         "test": "jest",
         "just-test": "echo \"Test: just test the script cmd \" && exit 0 "
     }

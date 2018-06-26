@@ -1,0 +1,12 @@
+footer {
+	background-color: $bgTranslucentBlack;
+	position: fixed;
+    bottom: 0px;
+    width: 1280px;
+	padding: 20px 0 0 40px;
+
+	p {
+		color: $color-red;
+		font-size: $fontSize-logo;
+	}
+}

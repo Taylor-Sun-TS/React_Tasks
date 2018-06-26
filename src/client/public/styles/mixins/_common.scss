@@ -1,0 +1,29 @@
+@mixin flex {
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+@mixin clearfix {
+	
+}
+
+@mixin boxSizing {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+@mixin positionVerticalCenter {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+@mixin borderRadius ($val: $border-radius) {
+	border-radius: $val;
+	-moz-border-radius: $val;
+	-webkit-border-radius: $val;
+}

@@ -1,0 +1,21 @@
+header {
+	background-color: $bgTranslucentBlack;
+	padding: 15px 40px;
+	position: relative;
+
+	p {
+		color: $color-red;
+		font-size: $fontSize-logo;
+	}
+
+	.search-btn {
+		@include positionVerticalCenter;
+		background-color: $color-white;
+		color: $color-red;
+		padding: 5px 10px;
+		display: inline-block;
+		right: 40px;
+		border: none;
+		cursor: pointer;
+	}
+}

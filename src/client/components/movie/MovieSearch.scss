@@ -1,0 +1,82 @@
+#search-section {
+
+	.main-content {
+		padding: 20px 60px 25px;
+		background-color: $bgTranslucentBlack;
+
+		.label-radio {
+			padding: 5px 15px;
+			background: $color-deepgray;
+			color: $color-white;
+			margin-left: 10px;
+		}
+
+		.label-radio.active {
+			background: $color-red;
+		}
+	}
+
+	h2 {
+		color: $color-white;
+		margin-bottom: 15px;
+	}
+	
+	.search-field {
+		@include boxSizing;
+
+		display: block;
+		width: 100%;
+		border: 1px solid $color-black;
+		border-bottom-color: $color-red;
+		background-color: $color-black;
+		color: $color-white;
+		padding: 10px 15px;
+		margin-bottom: 15px;
+	}
+
+	.search-by-box {
+		position: relative;
+
+		.text {
+			color: $color-white;
+		}
+
+		.search-btn {
+			@include positionVerticalCenter;
+			right: 0;
+			color: $color-white;
+			background: $color-red;
+			border: none;
+			width: 105px;
+			line-height: 21px;
+			cursor: pointer;
+		}
+	}
+
+	.bottom-bar {
+		align-items: center;
+		min-height: 30px;
+		padding-left: 60px;
+		background-color: $color-gray;
+
+		.label-radio {
+			margin-right: 30px;
+		}
+
+		.label-radio.active {
+			color: $color-red;
+		}
+	}
+
+	.res-count, .res-sort {
+		flex: auto;
+	}
+
+	.res-sort {
+		text-align: right;
+
+		.text {
+			margin-right: 15px;
+		}
+	}
+}

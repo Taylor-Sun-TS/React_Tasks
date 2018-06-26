@@ -1,0 +1,62 @@
+.movie-list {
+	padding: 50px 0;
+	.top-bar {
+		line-height: 30px;
+		padding-left: 60px;
+		background-color: $color-gray;
+	}
+
+	ul {
+		margin: 0 15px;
+	}
+
+	li {
+		@include boxSizing;
+		flex: none;
+		width: 33.33%;
+		padding: 0 110px;
+		margin-bottom: 35px;
+	}
+
+	.image-box {
+		height: 280px;
+		overflow: hidden;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+
+	.image-box img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	h3 {
+		position: relative;
+		padding-right: 50px;
+		margin-bottom: 3px;
+		color: $color-deepgray;
+	}
+
+	.date {
+		@include borderRadius;
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		border: 1px solid $color-gray;
+		padding: 1px 5px;
+		font-size: 12px;
+	}
+
+	.genres {
+		color: $color-deepgray;
+	}
+
+	.emptyMsg {
+		padding: 100px 0 220px;
+		font-size: 24px;
+		text-align: center;
+	}
+}

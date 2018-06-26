@@ -6,3 +6,7 @@ package-lock.json
 
 # dist
 dist
+
+#Jest
+coverage
+__snapshots__

@@ -16,7 +16,7 @@ function LabelRadio(props) {
 					id={props.id} 
 					class={props.class} 
 					value={props.value} 
-					defaultChecked={props.defaultChecked} 
+					checked={props.defaultChecked} 
 					onChange={props.onChange} />
 			</label>
 		</React.Fragment>
@@ -30,7 +30,7 @@ function Radio(props) {
 				id={props.id} 
 				className={props.class}
 				value={props.value} 
-				defaultChecked={props.defaultChecked}
+				checked={props.defaultChecked}
 				onChange={props.onChange} />
 }
 

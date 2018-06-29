@@ -37,12 +37,12 @@ export default class MovieSearch extends React.Component {
 			const defaultChecked = conditions.searchBy === item.value
 
 			return <LabelRadio 
-						key={index} 
+						key={id} 
 						name={name}
 						id={id} 
 						labelName={item.name} 
 						value={item.value} 
-						defaultChecked={defaultChecked} 
+						checked={defaultChecked} 
 						onChange={this.handleSearchByChange} />
 		})
 
@@ -52,12 +52,12 @@ export default class MovieSearch extends React.Component {
 			const defaultChecked = conditions.sortBy === item.value
 
 			return <LabelRadio 
-						key={index} 
+						key={id} 
 						name={name}
 						id={id} 
 						labelName={item.name} 
 						value={item.value} 
-						defaultChecked={defaultChecked} 
+						checked={defaultChecked} 
 						onChange={this.handleSortByChange} />
 		})
 

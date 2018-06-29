@@ -20,7 +20,7 @@ function MovieList(props) {
 						Fimls by Drama genre
 					</div>
 				}
-		      	{Object.keys(movies).length ? (
+		      	{movies.length ? (
 					<ul className="flex">
 						{movieListItems}
 					</ul>

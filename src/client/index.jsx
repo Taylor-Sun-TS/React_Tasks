@@ -1,11 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Root from 'Root'
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
-import * as history from 'history'
-import MovieListPage from 'MovieListPage'
-import MovieDetailPage from 'MovieDetailPage'
-import NotFound from 'NotFound'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Root from 'Root';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import MovieListPage from 'MovieListPage';
+import MovieDetailPage from 'MovieDetailPage';
+import NotFound from 'NotFound';
 
 import './main.scss'
 

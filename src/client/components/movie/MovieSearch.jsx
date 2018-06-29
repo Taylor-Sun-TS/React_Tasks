@@ -37,7 +37,7 @@ export default class MovieSearch extends React.Component {
 			const defaultChecked = conditions.searchBy === item.value
 
 			return <LabelRadio 
-						key={id} 
+						key={id}
 						name={name}
 						id={id} 
 						labelName={item.name} 

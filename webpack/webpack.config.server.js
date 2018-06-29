@@ -1,21 +1,21 @@
 const path = require('path')
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const nodeExternals = require('webpack-node-externals')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const alias = require('./webpack.resolve.alias')
+const alias = require('../webpack.resolve.alias')
 
 module.exports = (env, options) => {
 	const isProduction = env && env.prod ? true : false
 
 	const config = {
-		context: path.resolve(__dirname, 'src'),
-		entry: './client/index',
+		entry: './src/client/serverRenderer',
 		mode: isProduction ? 'production' : 'development',
 		devtool: isProduction ? 'none' : 'source-map',
-
+ 		externals: [nodeExternals()],
 		output: {
-			filename: 'bundle.js',
-			path: path.resolve(__dirname, './dist'),
+			filename: 'serverRenderer.js',
+			libraryTarget: 'commonjs2',
+			path: path.resolve(__dirname, '../dist'),
 			publicPath: '/'
 		},
 
@@ -59,40 +59,6 @@ module.exports = (env, options) => {
 					})
 				}
 			]
-		},
-		
-
-		plugins: [
-			new ExtractTextPlugin('[name].css'),
-			new HtmlWebpackPlugin({
-				title: 'React_Tasks',
-				hash: true,
-				template: path.resolve(__dirname, './index.html')
-			})
-		]
-	}
-
-	if (isProduction) {
-		config.optimization = {
-			splitChunks: {
-				cacheGroups: {
-					commons: {
-            			name: 'commons',
-						chunks: 'all',
-						minSize: 0,
-						minChunks: 2
-					}
-				}
-			}
-		}
-	} else {
-		config.plugins.push(new webpack.HotModuleReplacementPlugin())
-		config.devServer = {
-			open: true,
-			hot: true,
-	        inline: true,
-	        contentBase: './dist/',
-	        historyApiFallback: true
 		}
 	}
 
